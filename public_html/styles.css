@@ -1,0 +1,77 @@
+* {
+    --pad: 20px;
+    --border: 2px #222 solid;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    padding: var(--pad);
+    gap: calc(var(--pad) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input, .search button {
+    padding: calc(var(--pad) / 2);
+    border-radius: calc(var(--pad) / 2);
+    border: var(--border);
+}
+
+.mediaPicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--pad);
+    padding: var(--pad);
+}
+
+.mediaPicker > * {
+    flex: 0 0 calc(25% - var(--pad));
+    box-sizing: border-box;
+    background: #f0f0f0;
+}
+
+.mediaInPicker {
+    border: var(--border);
+    transition: 0.2s transform;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border-radius: var(--pad);
+    padding: var(--pad);
+    gap: var(--pad);
+}
+
+.mediaInPicker:hover {
+    transform: scale(1.05);
+}
+
+.mediaIcon {
+    width: 400px;
+    height: 226px;
+    object-fit: cover;
+    border-radius: calc(var(--pad) - 2px);
+    position: relative;
+}
+
+.mediaInfo {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: calc(var(--pad) / 4)
+}
